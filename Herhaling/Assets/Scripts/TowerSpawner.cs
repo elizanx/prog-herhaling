@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -22,9 +21,9 @@ public class TowerSpawner : MonoBehaviour
 
     private Vector3 RandomPosition()
     {
-        float y = UnityEngine.Random.Range(-10f, 10f);
-        float x = UnityEngine.Random.Range(-10f, 10f);
-        float z = UnityEngine.Random.Range(-10f, 10f);
+        float y = Random.Range(-10f, 10f);
+        float x = Random.Range(-10f, 10f);
+        float z = Random.Range(-10f, 10f);
         Vector3 randPosition = new Vector3(y, x, z);
         return randPosition;
     }
@@ -35,9 +34,9 @@ public class TowerSpawner : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject towers = Instantiate(Tower);
-            scale = UnityEngine.Random.Range(0, 5);
+            scale = Random.Range(0, 5);
             towers.transform.localScale = new Vector3(scale, scale, scale);
-            randPosition = new Vector3(UnityEngine.Random.Range(-10, 10), 0, UnityEngine.Random.Range(-10, 10));
+            randPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
             towers.transform.position = randPosition;
         }
     }
