@@ -25,24 +25,20 @@ public class EnemySpawnerLes3 : MonoBehaviour
         {
             {
                 for (int i = 100; i < gameObjects.Count; i++) ;
+                GameObject newEnemy = Instantiate(Cube);
+                gameObjects.Add(newEnemy);
+                Debug.Log("werkt dit");
             }
         }
-
-        GameObject newEnemy = Instantiate(Cube);
-        gameObjects.Add(newEnemy);
-    }
-
-    private void SpawnEnemies()
-    {
-        GameObject newEnemy = Instantiate(Cube);
-        gameObjects.Add(newEnemy);
-
-
-
-        for (int i = 0; i < gameObjects.Count; i++)
+        else
         {
-            Destroy(gameObjects[i]);
+            if (Input.GetKey(KeyCode.Q))
+            {
+                Destroy(gameObject);
+                Debug.Log("Werkt dit?");
+            }
         }
-        gameObjects.Clear();
     }
+
+   
 }
