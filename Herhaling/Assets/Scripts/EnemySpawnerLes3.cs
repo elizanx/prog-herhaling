@@ -7,7 +7,7 @@ public class EnemySpawnerLes3 : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject Cube;
-    public int enemiesPerSecond = 3;
+    public int enemiesPerSecond = 1;
         
     List<GameObject> gameObjects = new List<GameObject>();
 
@@ -57,7 +57,7 @@ public class EnemySpawnerLes3 : MonoBehaviour
 
     private void spawnEnemy()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < enemiesPerSecond; i++)
         {
 
             GameObject newEnemy = Instantiate(Cube);
