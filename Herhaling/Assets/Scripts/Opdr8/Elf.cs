@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeMovementLes3 : MonoBehaviour
+public class Elf : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +13,6 @@ public class CubeMovementLes3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.forward * speed * Time.deltaTime;
+        
     }
 }
